@@ -44,7 +44,7 @@ class UserAuthenticateController extends Controller
     {
         $this->validate(request(),[
             'name' => 'required|alpha_dash|unique:users,name',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed'
         ]);
 

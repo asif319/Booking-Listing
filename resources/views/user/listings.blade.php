@@ -180,23 +180,7 @@
                                             </div>
                                         @endif
                                         <br>
-                                        @if(Auth::guard('client')->id() == $reviewPosts->client_id)
-                                            <form action="{{ route('review.edit', [$listing->id, Auth::guard('client')->id()]) }}" method="POST">
-                                                @csrf
-                                                <div>
-                                                    <span class="trigger "><a href="#">Edit<i
-                                                                class="sl sl-icon-plus"></i></a></span>
-                                                    <div class="toggle-container">
-                                                        <div>
-                                                            {{--<textarea cols="40" rows="3"--}}
-                                                                      {{--value="hi"></textarea>--}}
-                                                            <input type="text" name="review" value="{{ $reviewPosts->review }}">
-                                                            <input type="submit" class="button" value="Send Message">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        @endif
+                            
                                     </div>
                                 </li>
                             </ul>

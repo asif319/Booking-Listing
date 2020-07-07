@@ -48,11 +48,11 @@ class ListingController extends Controller
 
     public function allListing()
     {
-        $listings = Listing::latest()->paginate(10);
+        $listings = Listing::latest()->paginate(1);
 
-//        $paginate = Listing::paginate();
+    //    $paginate = Listing::paginate();
 
-        return view('user.listings_list', compact(['listings', 'paginate']));
+        return view('user.listings_list', compact(['listings']));
     }
 
     public function editShow($id)
